@@ -13,6 +13,7 @@ TIMEZONE = 'America/Chicago'
 DEFAULT_LANG = 'en'
 
 # Feed generation is usually not desired when developing
+# We literally do not care about feed generation here
 FEED_ALL_ATOM = None
 CATEGORY_FEED_ATOM = None
 TRANSLATION_FEED_ATOM = None
@@ -31,5 +32,13 @@ SOCIAL = (('You can add links in your config file', '#'),
 
 DEFAULT_PAGINATION = 10
 
+DIRECT_TEMPLATES = ['index', 'categories', 'tags']
+STATIC_PATHS = ['images']
+
+ARTICLE_SAVE_AS = '{category}/{slug}.html'
+ARTICLE_URL = '{category}/{slug}.html'
+
+USE_FOLDER_AS_CATEGORY = False
+
 # Uncomment following line if you want document-relative URLs when developing
-#RELATIVE_URLS = True
+RELATIVE_URLS = True
