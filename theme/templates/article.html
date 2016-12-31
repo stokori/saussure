@@ -19,8 +19,12 @@
          title="Permalink to {{ article.title|striptags }}">{{ article.title }}</a></h2>
 
   </header>
-    {{ article.species }}
+    
   <div class="entry-content">
+  {{ article.species }}
+    <br>
+    {{ article.personality }}
+    <br>
     {{ article.content }}
   </div><!-- /.entry-content -->
 </section>

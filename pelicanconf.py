@@ -31,14 +31,26 @@ SOCIAL = (('You can add links in your config file', '#'),
           ('Another social link', '#'),)
 
 DEFAULT_PAGINATION = 10
+DEFAULT_DATE = 'fs'
+DEFAULT_DATE_FORMAT = ''
+
+THEME = 'theme'
+FORMATTED_FIELDS = ['personality']
 
 DIRECT_TEMPLATES = ['index', 'categories', 'tags']
 STATIC_PATHS = ['images']
 
-ARTICLE_SAVE_AS = '{category}/{slug}.html'
-ARTICLE_URL = '{category}/{slug}.html'
+ARTICLE_URL = '{category}/{slug}/'
+ARTICLE_SAVE_AS = '{category}/{slug}/index.html'
 
-USE_FOLDER_AS_CATEGORY = False
+CATEGORY_URL = 'category/{slug}'
+CATEGORY_SAVE_AS = 'category/{slug}/index.html'
+
+YEAR_ARCHIVE_SAVE_AS = ''
+MONTH_ARCHIVE_SAVE_AS = ''
+AUTHOR_SAVE_AS = ''
+
+USE_FOLDER_AS_CATEGORY = True
 
 # Uncomment following line if you want document-relative URLs when developing
 RELATIVE_URLS = True

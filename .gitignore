@@ -1,0 +1,6 @@
+*.pyc
+.sw*
+.*.sw*
+.ropeproject/
+__pycache__/
+output/
