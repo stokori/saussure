@@ -11,7 +11,7 @@
         
                 <header> <h2 class="entry-title"><a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark" title="Permalink to {{ article.title|striptags }}">{{ article.title }}</a></h2> </header>
                 <!-- /.post-info -->
-                <div class="entry-content"> {{ article.summary }} </div><!-- /.entry-content -->
+                <div class="avatar"><img src="{{ SITEURL }}/images/avatars/{{ article.avatar }}"></div><!-- /.entry-content -->
         </article></li>
 {% endfor %}
 </ol><!-- /#posts-list -->
