@@ -5,17 +5,22 @@
         <title>{% block title %}{{ SITENAME }}{% endblock title %}</title>
         <meta charset="utf-8" />
         
-        {% assets filters="sass,cssmin", output="css/style.min.css", "css/style.scss" %}
+        {% assets filters="pyscss,cssmin", output="css/style.min.css", "css/style.scss" %}
             <link rel="stylesheet" href="{{ SITEURL }}/{{ ASSET_URL }}">
         {% endassets %}
         
         {% endblock head %}
+        
+
 </head>
 
-<body id="index" class="home">
-        <header id="banner" class="body">
-                <h1><a href="{{ SITEURL }}/">{{ SITENAME }} <strong>{{ SITESUBTITLE }}</strong></a></h1>
+<body>
+        <header id="banner">
+                <h1><a href="{{ SITEURL }}/">{{ SITENAME }}</a></h1>
+                {{ SITESUBTITLE }}
         </header><!-- /#banner -->
+        
+        
         <nav id="menu"><ul>
         {% for title, link in MENUITEMS %}
             <li><a href="{{ link }}">{{ title }}</a></li>
@@ -32,10 +37,12 @@
           {% endif %}
         {% endif %}
         </ul></nav><!-- /#menu -->
+        
         {% block content %}
         {% endblock %}
-        <footer id="contentinfo" class="body">
-                <address id="about" class="vcard body">
+        
+        <footer id="info">
+                <address>
                 Proudly powered by <a href="http://getpelican.com/">Pelican</a>,
                 which takes great advantage of <a href="http://python.org">Python</a>.
                 </address><!-- /#about -->

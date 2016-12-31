@@ -1,8 +1,8 @@
 Title: Gwynthyr
-Avatar: gwynthyr.png
-Fullbody: 
+Description: Horrible plant disaster
 Species: Sylvari
 Gender: no
 Sexuality: yes
 Personality: horrible *plant* <br> **disaster**
 Quote:
+Tags: guild wars, sylvari

@@ -1,20 +1,12 @@
 {% extends "base.html" %}
 {% block head %}
-  {{ super() }}
-  {% if article.description %}
-    <meta name="description" content="{{article.description}}" />
-  {% endif %}
-
-  {% for tag in article.tags %}
-    <meta name="tags" content="{{tag}}" />
-  {% endfor %}
 
 {% endblock %}
 
 {% block content %}
-<section id="content" class="body">
+<section id="character" class="body">
   <header>
-    <h2 class="entry-title">
+    <h2 class="title">
       <a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark"
          title="Permalink to {{ article.title|striptags }}">{{ article.title }}</a></h2>
 

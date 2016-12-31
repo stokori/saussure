@@ -4,6 +4,7 @@ from __future__ import unicode_literals
 
 AUTHOR = 'Kazi Toko'
 SITENAME = 'Saussure'
+SITESUBTITLE = "Kazi's character database"
 SITEURL = ''
 
 PATH = 'content'
@@ -33,11 +34,15 @@ DEFAULT_DATE_FORMAT = ''
 THEME = 'theme'
 FORMATTED_FIELDS = ['personality']
 
+PLUGIN_PATHS = ['./plugins']
+PLUGINS = ['assets']
+
 DIRECT_TEMPLATES = ['index', 'categories', 'tags']
 STATIC_PATHS = ['images']
 
 ARTICLE_URL = '{category}/{slug}/'
 ARTICLE_SAVE_AS = '{category}/{slug}/index.html'
+ARTICLE_ORDER_BY = 'basename'
 
 CATEGORY_URL = '{slug}'
 CATEGORY_SAVE_AS = '{slug}/index.html'
