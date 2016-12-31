@@ -21,14 +21,10 @@ AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 
 # Blogroll
-LINKS = (('Pelican', 'http://getpelican.com/'),
-         ('Python.org', 'http://python.org/'),
-         ('Jinja2', 'http://jinja.pocoo.org/'),
-         ('You can modify those links in your config file', '#'),)
+LINKS = (('', ''))
 
 # Social widget
-SOCIAL = (('You can add links in your config file', '#'),
-          ('Another social link', '#'),)
+SOCIAL = (('',''))
 
 DEFAULT_PAGINATION = 10
 DEFAULT_DATE = 'fs'
@@ -43,11 +39,9 @@ STATIC_PATHS = ['images']
 ARTICLE_URL = '{category}/{slug}/'
 ARTICLE_SAVE_AS = '{category}/{slug}/index.html'
 
-CATEGORY_URL = 'category/{slug}'
-CATEGORY_SAVE_AS = 'category/{slug}/index.html'
+CATEGORY_URL = '{slug}'
+CATEGORY_SAVE_AS = '{slug}/index.html'
 
-YEAR_ARCHIVE_SAVE_AS = ''
-MONTH_ARCHIVE_SAVE_AS = ''
 AUTHOR_SAVE_AS = ''
 
 USE_FOLDER_AS_CATEGORY = True
