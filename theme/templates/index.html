@@ -12,10 +12,10 @@
             <li class="character">
                 <article>
                 
-                        <div class="avatar"><img src="{{ SITEURL }}/images/avatars/{{ article.title|striptags }}.png"></div>
+                        <div class="avatar"><img src="{{ SITEURL }}/images/avatars/{{ article.slug }}.png"></div>
                         <h2 class="character-name"><a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark" title="Permalink to {{ article.title|striptags }}">{{ article.title }}</a></h2>
-                        {{ article.description }}
-                        {{ article.category }}
+                        <div class="character-description">{{ article.description }}</div>
+                        <div class="character-category">{{ article.category }}</div>
                         
                 </article>
             </li>
@@ -26,5 +26,7 @@
         {% include 'pagination.html' %}
     {% endif %}
 </section>
+
+
 
 {% endblock content %}

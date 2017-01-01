@@ -32,13 +32,21 @@ DEFAULT_DATE = 'fs'
 DEFAULT_DATE_FORMAT = ''
 
 THEME = 'theme'
-FORMATTED_FIELDS = ['personality']
+FORMATTED_FIELDS = []
 
 PLUGIN_PATHS = ['./plugins']
 PLUGINS = ['assets']
 
 DIRECT_TEMPLATES = ['index', 'categories', 'tags']
-STATIC_PATHS = ['images']
+STATIC_PATHS = [
+    'images',
+    'extra/robots.txt', 
+    'extra/favicon.ico' ]
+
+EXTRA_PATH_METADATA = {
+    'extra/robots.txt': {'path': 'robots.txt'},
+    'extra/favicon.ico': {'path': 'favicon.ico'}
+    }
 
 ARTICLE_URL = '{category}/{slug}/'
 ARTICLE_SAVE_AS = '{category}/{slug}/index.html'

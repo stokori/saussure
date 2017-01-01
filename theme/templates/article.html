@@ -1,23 +1,30 @@
 {% extends "base.html" %}
-{% block head %}
-
-{% endblock %}
 
 {% block content %}
 <section id="character" class="body">
-  <header>
-    <h2 class="title">
-      <a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark"
-         title="Permalink to {{ article.title|striptags }}">{{ article.title }}</a></h2>
+    <header>
+        <h2 class="title">
+                <a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark" title="Permalink to {{ article.title|striptags }}">
+                    {{ article.title }}
+                </a>
+            </h2>
+        {{ article.quote }}
 
-  </header>
+    </header>
     
-  <div class="entry-content">
-  {{ article.species }}
-    <br>
-    {{ article.personality }}
-    <br>
-    {{ article.content }}
-  </div><!-- /.entry-content -->
+    <div class="entry-content">
+    
+        Species: {{ article.species }}
+        <br>
+        Gender: {{ article.gender }}
+        <br>
+        Sexuality: {{ article.sexuality }}
+        <br>
+        Personality: {{ article.personality }}
+        
+        <p>{{ article.content }}</p>
+    
+    </div>
+
 </section>
 {% endblock %}

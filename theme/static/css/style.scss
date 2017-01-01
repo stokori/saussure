@@ -38,16 +38,25 @@ a {
     .character-list {
         list-style: none;
         padding-left: 0;
+        
+        /* clearfix*/
+        &:after {
+          content: '';
+          display: block;
+          clear: both;
+        }
+        
     }
 
     .character {
-        margin: 0px;
+        margin: 1%;
         display: inline-block;
         background-color: blue;
         text-align: center;
         padding: 10px;
         width: 20%;
-        height: 300;
+        max-height: 300;
+        float: left;
         
         .avatar {
                 
@@ -60,4 +69,6 @@ a {
             margin: 5px;
         }
     }
+    
+    
 }
