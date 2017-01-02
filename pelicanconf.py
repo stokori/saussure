@@ -57,5 +57,7 @@ CATEGORY_SAVE_AS = '{slug}/index.html'
 
 AUTHOR_SAVE_AS = ''
 
+DISPLAY_CATEGORIES_ON_MENU = True
+
 # Uncomment following line if you want document-relative URLs when developing
 RELATIVE_URLS = True
