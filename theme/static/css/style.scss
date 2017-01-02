@@ -5,7 +5,7 @@ $header-font: 'Libre Baskerville', sans-serif;
 
 $color-1: #bccad6;
 $color-2: #8d9db6;
-$color-3: #667292;
+$color-3: #5a6d8c;
 $color-4: #f1e3dd;
 
 body {
@@ -13,8 +13,9 @@ body {
     font-family: $body-font;
 }
 
-h1 {
+h1, h2 {
     font-family: $header-font;
+    color: $color-3;
 }
 
 a {
