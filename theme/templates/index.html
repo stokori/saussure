@@ -5,6 +5,7 @@
 <section id="index">
 
     {% block content_title %}
+        <h2>Latest Updated</h2>
     {% endblock %}
 
     <ol class="character-list">
@@ -22,9 +23,6 @@
     {% endfor %}
     </ol><!-- /#posts-list -->
 
-    {% if articles_page.has_other_pages() %}
-        {% include 'pagination.html' %}
-    {% endif %}
 </section>
 
 

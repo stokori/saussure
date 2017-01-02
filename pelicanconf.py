@@ -27,7 +27,7 @@ LINKS = (('', ''))
 # Social widget
 SOCIAL = (('',''))
 
-DEFAULT_PAGINATION = 10
+DEFAULT_PAGINATION = 4
 DEFAULT_DATE = 'fs'
 DEFAULT_DATE_FORMAT = ''
 
@@ -50,7 +50,6 @@ EXTRA_PATH_METADATA = {
 
 ARTICLE_URL = '{category}/{slug}/'
 ARTICLE_SAVE_AS = '{category}/{slug}/index.html'
-ARTICLE_ORDER_BY = 'basename'
 
 CATEGORY_URL = '{slug}'
 CATEGORY_SAVE_AS = '{slug}/index.html'

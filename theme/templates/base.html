@@ -28,19 +28,23 @@
                 <li><a href="{{ link }}">{{ title }}</a></li>
             {% endfor %}
             
-            
-            {% for p in pages %}
-                <li{% if p == page %} class="active"{% endif %}><a href="{{ SITEURL }}/{{ p.url }}">{{ p.title }}</a></li>
-            {% endfor %}
+            <li class="dropdown">
+                <a href="#" class="dropdown-title">View All</a>
+                    <div class="dropdown-links">
+                        {% for p in pages %}
+                            <a href="{{ SITEURL }}/{{ p.url }}" {% if p == page %} class="active"{% endif %}>{{ p.title }}</a>
+                        {% endfor %}
+                    </div>
+            </li>   
             
             
             <li class="dropdown">
                 <a href="#" class="dropdown-title">Categories</a>
-                <div class="dropdown-links">
-                {% for cat, null in categories %}
-                    <a href="{{ SITEURL }}/{{ cat.url }}" {% if cat == category %} class="active"{% endif %}>{{ cat }}</a>
-                {% endfor %}
-                </div>
+                    <div class="dropdown-links">
+                        {% for cat, null in categories %}
+                            <a href="{{ SITEURL }}/{{ cat.url }}" {% if cat == category %} class="active"{% endif %}>{{ cat }}</a>
+                        {% endfor %}
+                    </div>
             </li>    
             
         </ul></nav>

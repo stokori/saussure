@@ -1,0 +1,14 @@
+{% extends "index.html" %}
+{% block content_title %}
+<h2>List All Alphabetical</h2>
+{% endblock %}
+
+{% block content %}
+
+ <ul>
+ {% for article in articles %}
+     <li><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></li>
+ {% endfor %}
+</ul>
+ 
+{% endblock %}
