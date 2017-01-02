@@ -27,7 +27,7 @@ LINKS = (('', ''))
 # Social widget
 SOCIAL = (('',''))
 
-DEFAULT_PAGINATION = 4
+DEFAULT_PAGINATION = 10
 DEFAULT_DATE = 'fs'
 DEFAULT_DATE_FORMAT = ''
 
