@@ -1,5 +1,6 @@
 Title: Corbin Maldera
 Slug: corbin
+Category: Guild Wars 2
 Description: Not a pigeon
 Species: Human
 Gender: Male

@@ -1,5 +1,6 @@
 Title: Gwynthyr
 Slug: gwynthyr
+Category: Guild Wars 2
 Description: Horrible plant disaster
 Species: Sylvari
 Gender: no
