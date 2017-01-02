@@ -18,37 +18,40 @@
 
 <body>
         <header id="banner">
-                <h1><a href="{{ SITEURL }}/">{{ SITENAME }}</a></h1>
-                {{ SITESUBTITLE }}
-        </header><!-- /#banner -->
-        
+            <h1><a href="{{ SITEURL }}/">{{ SITENAME }}</a></h1>
+            {{ SITESUBTITLE }}
+        </header>
         
         <nav id="menu"><ul>
-        {% for title, link in MENUITEMS %}
-            <li><a href="{{ link }}">{{ title }}</a></li>
-        {% endfor %}
-        {% if DISPLAY_PAGES_ON_MENU %}
-          {% for p in pages %}
-            <li{% if p == page %} class="active"{% endif %}><a href="{{ SITEURL }}/{{ p.url }}">{{ p.title }}</a></li>
-          {% endfor %}
-        {% else %}
-          {% if DISPLAY_CATEGORIES_ON_MENU %}
-            {% for cat, null in categories %}
-              <li{% if cat == category %} class="active"{% endif %}><a href="{{ SITEURL }}/{{ cat.url }}">{{ cat }}</a></li>
+            
+            {% for title, link in MENUITEMS %}
+                <li><a href="{{ link }}">{{ title }}</a></li>
             {% endfor %}
-          {% endif %}
-        {% endif %}
-        </ul></nav><!-- /#menu -->
+            
+            
+            {% for p in pages %}
+                <li{% if p == page %} class="active"{% endif %}><a href="{{ SITEURL }}/{{ p.url }}">{{ p.title }}</a></li>
+            {% endfor %}
+            
+            
+            <li class="dropdown">
+                <a href="#" class="dropdown-title">Categories</a>
+                <div class="dropdown-links">
+                {% for cat, null in categories %}
+                    <a href="{{ SITEURL }}/{{ cat.url }}" {% if cat == category %} class="active"{% endif %}>{{ cat }}</a>
+                {% endfor %}
+                </div>
+            </li>    
+            
+        </ul></nav>
         
         {% block content %}
         {% endblock %}
         
         <footer id="info">
-                <address>
-                © 2016 Kazi Fodor | <a href="https://github.com/stokori/saussure/">GitHub Repo</a>
-                <br>
-                Powered by <a href="http://getpelican.com/">Pelican</a>.
-                </address><!-- /#about -->
-        </footer><!-- /#contentinfo -->
+            © 2016 Kazi Fodor | <a href="https://github.com/stokori/saussure/">GitHub Repo</a>
+            <br>
+            Powered by <a href="http://getpelican.com/">Pelican</a>.
+        </footer>
 </body>
 </html>

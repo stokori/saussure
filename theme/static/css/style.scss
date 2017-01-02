@@ -40,6 +40,62 @@ a {
     
 }
 
+#menu {
+
+    ul {
+        list-style-type: none;
+        margin: 0px;
+        margin-top: 10px;
+        padding: 0;
+        overflow: hidden;
+        background-color: $color-2;
+        text-align: center;
+    }
+    
+    li a, .dropdown-title {
+        display: inline-block;
+        color: $color-4;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+
+    li a:hover, .dropdown:hover .dropdown-title {
+        background-color: $color-3;
+    }
+
+    li {
+
+        display: inline-block;
+    
+        .dropdown {
+            display: inline-block;
+        }
+    }
+
+    .dropdown-links {
+        display: none;
+        position: absolute;
+        background-color: #FFFFFF;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    }
+
+    .dropdown-links a {
+        color: $color-3;
+        padding: 12px 16px;
+        display: block;
+        text-align: left;
+    }
+
+    .dropdown-links a:hover {background-color: $color-4}
+
+    .dropdown:hover .dropdown-links {
+        display: block;
+    }
+    
+}
+
 #index {
 
     .character-list {
