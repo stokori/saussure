@@ -7,13 +7,14 @@ $color-1: #bccad6;
 $color-2: #8d9db6;
 $color-3: #5a6d8c;
 $color-4: #f1e3dd;
+$color-5: #46546d;
 
 body {
     background-color: $color-1;
     font-family: $body-font;
 }
 
-h1, h2 {
+h1, h2, h3, h4 {
     font-family: $header-font;
     color: $color-3;
 }
@@ -28,16 +29,23 @@ a {
     
 }
 
+hr {
+    border: none;
+    height: 1px;
+    background-color: $color-3;
+}
+
 #banner {
 
     text-align: center;
 
 }
 
-#info {
+#footer-info {
 
     text-align: center;
     font-size: 0.8em;
+    margin: 2%;
     
 }
 
@@ -98,7 +106,6 @@ a {
 }
 
 #index {
-
     .character-list {
         list-style: none;
         padding-left: 0;
@@ -135,4 +142,52 @@ a {
     }
     
     
+}
+
+#character {
+    .fullbody {
+        float: left;
+        margin: 0px;
+        margin-right: 10px;
+    }
+    
+    h4 {
+        color: $color-5;
+    }
+    
+    header {
+        text-align: center;
+    }
+
+    .character-container {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    
+    .character-info {
+        background-color: $color-2;
+        padding: 2%;
+        overflow: auto;
+    }
+    
+    .character-content {
+        background-color: $color-2;
+        padding: 2%;
+        overflow: auto;
+        margin-top: 2%;
+    }
+    
+    h4 {
+        display: inline;
+    }
+    
+    .line {
+        margin-bottom: .5em;
+    }
+    
+    &::after {
+        content: "";
+        display: table;
+        clear: both;
+    }
 }

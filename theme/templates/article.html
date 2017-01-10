@@ -8,23 +8,41 @@
                     {{ article.title }}
                 </a>
             </h2>
-        {{ article.quote }}
+        <blockquote>{{ article.quote }}</blockquote>
 
     </header>
     
-    <div class="entry-content">
     
-        Species: {{ article.species }}
-        <br>
-        Gender: {{ article.gender }}
-        <br>
-        Sexuality: {{ article.sexuality }}
-        <br>
-        Personality: {{ article.personality }}
+    <div class="character-container">
+    
+        <div class="character-info">
+            <figure class="fullbody"><img src="{{ SITEURL }}/images/avatars/{{ article.slug }}.png"></figure>
+            
+            <section class="line"><h4>Setting:</h4> {{ article.category }}</section>
+            
+            <section class="line"><h4>Species:</h4> {{ article.species }}</section>
+            
+            <section class="line"><h4>Gender:</h4> {{ article.gender }}</section>
+            
+            <section class="line"><h4>Sexuality:</h4> {{ article.sexuality }}</section>
         
-        <p>{{ article.content }}</p>
-    
-    </div>
+        </div>
+        
+        <div class="character-content">
+        
+            <h4>Personality:</h4> 
+            <p>{{ article.personality }}</p>
+            
+            <hr>
+            
+            <h4>History:</h4> 
+            <p>{{ article.history }}</p>
+        
+            <hr>
+            
+            <p>{{ article.content }}</p>
+        </div>
 
+    </div>
 </section>
 {% endblock %}
